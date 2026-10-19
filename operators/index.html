@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JavaScript Operators Playground</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>JavaScript operators playground</h1>
+  <p class="sub">Try arithmetic, assignment and comparison operators with your own numbers.</p>
+
+  <section>
+    <h2>Arithmetic: + - * / % **</h2>
+    <div class="row">
+      <input id="a1" type="number" value="10" aria-label="First number">
+      <select id="op1" aria-label="Arithmetic operator">
+        <option>+</option><option>-</option><option>*</option>
+        <option>/</option><option>%</option><option>**</option>
+      </select>
+      <input id="b1" type="number" value="3" aria-label="Second number">
+      <button id="calc1">Calculate</button>
+    </div>
+    <div class="out" id="out1">Press Calculate</div>
+  </section>
+
+  <section>
+    <h2>Assignment: = += -= *= /=</h2>
+    <div class="row">
+      <span>x =</span><strong id="xval">5</strong>
+      <select id="op2" aria-label="Assignment operator">
+        <option>=</option><option>+=</option><option>-=</option>
+        <option>*=</option><option>/=</option>
+      </select>
+      <input id="b2" type="number" value="2" aria-label="Value">
+      <button id="apply2">Apply</button>
+      <button id="reset2" class="alt">Reset x to 5</button>
+    </div>
+    <div class="out" id="out2">x starts at 5</div>
+  </section>
+
+  <section>
+    <h2>Comparison: == === != !== &gt; &lt; &gt;= &lt;=</h2>
+    <div class="row">
+      <input id="a3" type="text" value="5" aria-label="First value" style="width:120px">
+      <select id="op3" aria-label="Comparison operator">
+        <option>==</option><option>===</option><option>!=</option><option>!==</option>
+        <option>&gt;</option><option>&lt;</option><option>&gt;=</option><option>&lt;=</option>
+      </select>
+      <input id="b3" type="text" value="5" aria-label="Second value" style="width:120px">
+      <button id="cmp3">Compare</button>
+    </div>
+    <p class="hint">Values that look like numbers are treated as numbers, others as strings. Use the checkbox to force text.</p>
+    <label class="hint"><input type="checkbox" id="asText" style="width:auto"> Treat both as text (so <code>"5"</code> is a string)</label>
+    <div class="out" id="out3">Press Compare</div>
+  </section>
+
+  <section>
+    <h2>Quick reference</h2>
+    <div class="grid">
+      <table>
+        <thead><tr><th>Expression</th><th>Result</th></tr></thead>
+        <tbody id="ref"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

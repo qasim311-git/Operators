@@ -1,0 +1,41 @@
+:root{
+  --bg:#f6f8fa; --card:#ffffff; --ink:#1b2430; --muted:#5d6b7c;
+  --line:#d8dee6; --accent:#1f6feb; --ok:#1a7f37; --bad:#c62828;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#10151c; --card:#18202a; --ink:#e6ebf1; --muted:#97a4b4;
+    --line:#2b3644; --accent:#58a6ff; --ok:#3fb950; --bad:#ff7b72;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10151c; --card:#18202a; --ink:#e6ebf1; --muted:#97a4b4;
+  --line:#2b3644; --accent:#58a6ff; --ok:#3fb950; --bad:#ff7b72;
+}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+main{max-width:760px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:1.6rem;margin:0 0 4px}
+h2{font-size:1.1rem;margin:0 0 12px}
+p.sub{margin:0 0 24px;color:var(--muted)}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:16px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+input,select,button{font:inherit;color:inherit;background:var(--bg);border:1px solid var(--line);
+  border-radius:6px;padding:8px 10px}
+input{width:110px}
+select{min-width:90px}
+button{cursor:pointer;background:var(--accent);color:#fff;border-color:var(--accent)}
+button.alt{background:var(--bg);color:var(--ink);border-color:var(--line)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.out{margin-top:12px;padding:10px 12px;border-radius:6px;background:var(--bg);
+  border:1px solid var(--line);font-family:ui-monospace,Menlo,Consolas,monospace;overflow-x:auto}
+.ok{color:var(--ok)} .bad{color:var(--bad)}
+.grid{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9rem}
+td,th{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.hint{color:var(--muted);font-size:.9rem;margin:8px 0 0}
